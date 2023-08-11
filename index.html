@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<head></head>
+<body>
+    <div id="displayBox">0</div>
+    
+    <button id="one">1</button>
+    <button id="two">2</button>
+    <button id="two">3</button>
+    <button id="two">2</button>
+    <button id="reset">AC</button>
+    <button id="zero">0</button>
+    <button id="equals">=</button>
+    <button id="add">+</button>
+    <button id="backspace" >backspace</button>
+    <script>
+        document.getElementById("backspace").onclick = function(){backSpace(); };
+         document.getElementById("zero").onclick = function(){addToDisplay(0)};
+         document.getElementById("one").onclick = function(){addToDisplay(1)};
+         document.getElementById("two").onclick = function(){addToDisplay(2)};
+         document.getElementById("add").onclick = function(){addToDisplay("+")};
+         document.getElementById("equals").onclick = function(){evulateExpression(totalValue)}
+         document.getElementById("reset").onclick = function(){ resetButton(); };
+        
+        
+        function addToDisplay(number) {
+            if (displayBox.innerText === "0") {
+                displayBox.innerText = ""; // Clear initial "0"
+            }
+            document.getElementById("displayBox").innerText += number;
+
+            console.log(document.getElementById("displayBox").innerHTML);
+            totalValue = document.getElementById("displayBox").innerHTML;
+            return totalValue
+            
+        }
+
+        function evulateExpression(totalValue){
+            totalValue = eval(totalValue);
+            document.getElementById("displayBox").innerHTML = totalValue; // Update displayBox with the result
+            console.log(totalValue)
+        }
+        function resetButton(){
+            totalValue = 0;
+            document.getElementById("displayBox").innerHTML = totalValue; // Clear displayBox
+            console.log(totalValue)
+        }
+        function backSpace(){
+            totalValue = displayBox.innerText.slice(0, -1);
+            displayBox.innerText = totalValue;
+        }
+        
+    </script>
+</body>
