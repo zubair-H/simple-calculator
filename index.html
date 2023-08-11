@@ -2,22 +2,39 @@
 <link rel="stylesheet" href="style.css">
 <head></head>
 <body>
-    <div id="displayBox">0</div>
-    
-    <button id="one">1</button>
-    <button id="two">2</button>
-    <button id="two">3</button>
-    <button id="two">2</button>
-    <button id="reset">AC</button>
-    <button id="zero">0</button>
-    <button id="equals">=</button>
-    <button id="add">+</button>
-    <button id="backspace" >backspace</button>
+    <span id="displayBox">0</span>
+    <div class="buttons_outer">
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="reset">AC</button>
+            <button id="zero">0</button>
+            <button id="equals">=</button>
+            <button id="add">+</button>
+            <button id="backspace" >backspace</button>
+        
+    </div>
     <script>
         document.getElementById("backspace").onclick = function(){backSpace(); };
          document.getElementById("zero").onclick = function(){addToDisplay(0)};
          document.getElementById("one").onclick = function(){addToDisplay(1)};
          document.getElementById("two").onclick = function(){addToDisplay(2)};
+
+         document.getElementById("three").onclick = function(){addToDisplay(3)};
+         document.getElementById("four").onclick = function(){addToDisplay(4)};
+         document.getElementById("five").onclick = function(){addToDisplay(5)};
+
+         document.getElementById("six").onclick = function(){addToDisplay(6)};
+         document.getElementById("seven").onclick = function(){addToDisplay(7)};
+         document.getElementById("eight").onclick = function(){addToDisplay(8)};
+         document.getElementById("nine").onclick = function(){addToDisplay(9)};
+
          document.getElementById("add").onclick = function(){addToDisplay("+")};
          document.getElementById("equals").onclick = function(){evulateExpression(totalValue)}
          document.getElementById("reset").onclick = function(){ resetButton(); };
@@ -48,6 +65,7 @@
         function backSpace(){
             totalValue = displayBox.innerText.slice(0, -1);
             displayBox.innerText = totalValue;
+            
         }
         
     </script>
