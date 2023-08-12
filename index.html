@@ -2,26 +2,35 @@
 <link rel="stylesheet" href="style.css">
 <head></head>
 <body>
+    <div class="displayBox">
     <span id="displayBox">0</span>
+    </div>
     <div class="buttons_outer">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button id="seven">7</button>
-            <button id="eight">8</button>
-            <button id="nine">9</button>
-            <button id="reset">AC</button>
-            <button id="zero">0</button>
-            <button id="equals">=</button>
-            <button id="add">+</button>
-            <button id="backspace" >backspace</button>
-        
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="add">+</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="subtract">-</button>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="multiply">x</button>
+        <button id="zero">0</button>
+        <button id="backspace" >.</button>
+        <button id="reset">AC</button>
+        <button id="divide">÷</button>
+        <button id="backspace" >()</button>
+        <button id="backspace" >back</button>
+        <button id="equals">=</button>
+        <button id="equals">=</button>
     </div>
     <script>
-        document.getElementById("backspace").onclick = function(){backSpace(); };
+        document.getElementById("subtract").onclick = function(){addToDisplay('-')};
+
+         document.getElementById("backspace").onclick = function(){backSpace(); };
          document.getElementById("zero").onclick = function(){addToDisplay(0)};
          document.getElementById("one").onclick = function(){addToDisplay(1)};
          document.getElementById("two").onclick = function(){addToDisplay(2)};

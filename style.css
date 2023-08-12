@@ -1,46 +1,53 @@
 body {
-    background-color: black;
-    
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: white;
+    background-color: #35333d;
 }
 
-
 .buttons_outer {
-    text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 80px);
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
     color: white;
+    width: fit-content;
+    margin: 20px auto 0; /* Adjusted the margin to close the gap */
+    gap: 5px;
 }
 
-
 .buttons_outer {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    background-color: #f0f0f0;
-    border: 1px solid #a8a8a8;
-    border-radius: 5px;
-    cursor: pointer;
+    outline: none;
+    border: 200px white;
+    background-color: transparent;
+    color: black;
 }
 
 #equals,
-#add {
-    background-color: #3498db;
+#add,
+#subtract,
+#multiply,
+#divide {
+    background-color: orange;
     color: white;
+    outline: none;
+    font-size: large;
 }
 
-#one,#two,#three, #four, #five, #six, #seven, #eight,#nine, #backspace, #reset,#zero{
-    color: rgb(0, 0, 0);
+#one,
+#two,
+#three,
+#four {
+    color: white;
+    outline: none;
+    font-size: large;
 }
 
 #displayBox {
-    
-    background-color: rgb(13, 18, 128);
+    display: flex;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 50px;
+    background-color: rgb(177, 179, 200);
     border: 1px solid #000000;
-    
     font-size: 40px;
     text-align: right;
 }
