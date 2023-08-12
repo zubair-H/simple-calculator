@@ -8,7 +8,8 @@ body {
     grid-template-rows: repeat(5, 70px);
     color: white;
     width: fit-content;
-    margin: 20px auto 0; /* Adjusted the margin to close the gap */
+    margin: 20px auto 0;
+    /* Adjusted the margin to close the gap */
     gap: 5px;
 }
 
@@ -41,13 +42,15 @@ body {
 
 #displayBox {
     display: flex;
-    margin-top: 0;
+    padding-top: 10px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    width: 280px;
-    height: 50px;
+    width: 290px;
+    height: 60px;
     background-color: rgb(177, 179, 200);
     border: 1px solid #000000;
     font-size: 40px;
     text-align: right;
+
 }
