@@ -15,7 +15,9 @@ body {
     width: fit-content;
     margin: 20px auto 0;
     /* Adjusted the margin to close the gap */
-    gap: 5px;
+    gap: px;
+    border-radius: 100px;
+
 }
 
 .buttons_outer {
@@ -23,26 +25,36 @@ body {
     border: 200px white;
     background-color: transparent;
     color: black;
+    
 }
 
-#equals,
+
 #add,
 #subtract,
 #multiply,
 #divide {
     background-color: orange;
     color: white;
-    outline: none;
     font-size: large;
+    
 }
 
 #one,
 #two,
 #three,
-#four {
+#four,#five, #six, #seven,#eight,#nine,#zero,#dot,#backspace,#reset{
+    color: rgb(0, 0, 0);
+    outline: none;
+    font-size: large;
+    
+}
+#equals{
+    background-color: orange;
     color: white;
     outline: none;
     font-size: large;
+    size: 100px;
+    width: 140px;
 }
 
 #displayBox {
