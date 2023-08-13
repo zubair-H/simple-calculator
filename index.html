@@ -24,14 +24,14 @@
         <button id="dot" >.</button>
         <button id="reset">AC</button>
         <button id="divide">÷</button>
-        <button id="backspace">()</button>
+        <button id="parenthesis">()</button>
         <button id="backspace" >back</button>
         <button id="equals">=</button>
        
     </div>
     <script>
         document.getElementById("subtract").onclick = function(){addToDisplay('-')};
-
+        document.getElementById("parenthesis").onclick = function(){addToDisplay('()')};
          document.getElementById("backspace").onclick = function(){backSpace(); };
          document.getElementById("zero").onclick = function(){addToDisplay(0)};
          document.getElementById("one").onclick = function(){addToDisplay(1)};
@@ -48,7 +48,7 @@
 
          document.getElementById("add").onclick = function(){addToDisplay("+")};
          document.getElementById("equals").onclick = function(){evulateExpression(totalValue)}
-         document.getElementById("reset").onclick = function(){ resetButton(); };
+         document.getElementById("reset").onclick = function(){ resetButton();};
         
         
         function addToDisplay(number) {
@@ -74,9 +74,16 @@
             console.log(totalValue)
         }
         function backSpace(){
-            totalValue = displayBox.innerText.slice(0, -1);
-            displayBox.innerText = totalValue;
+            var totalValue = displayBox.innerText
+            if (totalValue.length == 1) { // this is to fix erasing everything.
+                displayBox.innerText = 0;  
+            }
             
+            else if (totalValue != 0){
+                totalValue = displayBox.innerText.slice(0, -1);
+                displayBox.innerText = totalValue;     
+            }
+
         }
         
     </script>
