@@ -2,6 +2,11 @@ body {
     background-color: #35333d;
 }
 
+#everything {
+    border: 100px salmon;
+    border-radius: 100px;
+}
+
 .buttons_outer {
     display: grid;
     grid-template-columns: repeat(4, 70px);
