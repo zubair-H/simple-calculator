@@ -1,6 +1,6 @@
 
 document.getElementById("subtract").onclick = function () { addToDisplay('-') };
-
+document.getElementById("multiply").onclick = function () { addToDisplay('*') };
 document.getElementById("backspace").onclick = function () { backSpace(); };
 document.getElementById("zero").onclick = function () { addToDisplay(0) };
 document.getElementById("one").onclick = function () { addToDisplay(1) };
