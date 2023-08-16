@@ -28,7 +28,7 @@ function addToDisplay(number) {
     if (displayBox.innerText === "0") {
         displayBox.innerText = ""; // Clear initial "0"
     }
-    else if (displayBox.innerText.length >= 15) { // to stop the user from typing too much into the displaybox.
+    else if (displayBox.innerText.length >= 14) { // to stop the user from typing too much into the displaybox.
         alert("too much input")
         return;
     }
